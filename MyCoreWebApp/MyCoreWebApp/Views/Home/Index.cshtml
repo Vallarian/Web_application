@@ -3,5 +3,27 @@
 }
 
 <div class="text-center">
-    <h1 class="display-4">Добро пожаловать!</h1>
+    <h1 class="display-2">Добро пожаловать!</h1>
 </div>
+
+@{
+    ViewData["Title"] = "Home Page";
+}
+
+
+@if (User.Identity.IsAuthenticated)
+{
+    <div class="text-center">
+        <h1 class="display-4"><p>@User.Identity.Name</p></h1>
+    <form method="post" asp-controller="Account" asp-action="Logout">
+        <input type="submit" value="Выход" />
+    </form>
+    </div>
+}
+else
+{
+    <div class="text-center">
+        <a  asp-controller="Account" asp-action="Login"><input type="submit"  value="Вход" /> </a>
+        <a asp-controller="Account" asp-action="Register"><input type="submit" value="Регистрация" /></a>
+    </div>
+}

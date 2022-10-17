@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\79512\\source\\repos\\MyCoreWebApp\\MyCoreWebApp\\MyCoreWebApp.csproj": {}
+    "C:\\project\\Web_application\\MyCoreWebApp\\MyCoreWebApp\\MyCoreWebApp.csproj": {}
   },
   "projects": {
-    "C:\\Users\\79512\\source\\repos\\MyCoreWebApp\\MyCoreWebApp\\MyCoreWebApp.csproj": {
+    "C:\\project\\Web_application\\MyCoreWebApp\\MyCoreWebApp\\MyCoreWebApp.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\79512\\source\\repos\\MyCoreWebApp\\MyCoreWebApp\\MyCoreWebApp.csproj",
+        "projectUniqueName": "C:\\project\\Web_application\\MyCoreWebApp\\MyCoreWebApp\\MyCoreWebApp.csproj",
         "projectName": "MyCoreWebApp",
-        "projectPath": "C:\\Users\\79512\\source\\repos\\MyCoreWebApp\\MyCoreWebApp\\MyCoreWebApp.csproj",
+        "projectPath": "C:\\project\\Web_application\\MyCoreWebApp\\MyCoreWebApp\\MyCoreWebApp.csproj",
         "packagesPath": "C:\\Users\\79512\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\79512\\source\\repos\\MyCoreWebApp\\MyCoreWebApp\\obj\\",
+        "outputPath": "C:\\project\\Web_application\\MyCoreWebApp\\MyCoreWebApp\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\79512\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -60,6 +60,12 @@
           ],
           "assetTargetFallback": true,
           "warn": true,
+          "downloadDependencies": [
+            {
+              "name": "Microsoft.NETCore.App.Host.win-x64",
+              "version": "[3.1.29, 3.1.29]"
+            }
+          ],
           "frameworkReferences": {
             "Microsoft.AspNetCore.App": {
               "privateAssets": "none"
