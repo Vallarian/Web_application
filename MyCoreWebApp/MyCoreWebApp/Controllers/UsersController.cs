@@ -4,12 +4,15 @@ using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Identity;
 using MyCoreWebApp.Models;
 using MyCoreWebApp.ViewModels;
+using Microsoft.AspNetCore.Authorization;
 
 namespace MyCoreWebApp.Controllers
 {
+    [Authorize(Roles = "admin")]
     public class UsersController : Controller
-    {
-        UserManager<User> _userManager;
+        { 
+        
+            UserManager<User> _userManager;
 
         public UsersController(UserManager<User> userManager)
         {
@@ -139,5 +142,6 @@ namespace MyCoreWebApp.Controllers
             }
             return View(model);
         }
+       
     }
 }

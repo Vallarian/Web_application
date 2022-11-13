@@ -1,6 +1,16 @@
-﻿@{
-    ViewData["Title"] = "Privacy Policy";
+﻿@model MyCoreWebApp.Models.Calculator
+@{
+    ViewData["Title"] = "Шифрование";
 }
 <h1>@ViewData["Title"]</h1>
 
-<p>Use this page to detail your site's privacy policy.</p>
+<form asp-action="Privacy">
+        <p><label>Текст</label></p>
+        <p><input type="text" asp-for="value1"/></p>
+        <p><label>Ключ</label></p>
+        <p><input type="text" asp-for="value2"/></p>
+        <p><input type="submit" value="Encode" asp-for="calulate"/></p>
+        <p><input type="submit" value="Decode" asp-for="calulate" /></p>
+        <p><label>Результат</label></p>
+        <p><input type="text" asp-for="@ViewData["result"]"/></p>
+</form>
