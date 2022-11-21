@@ -8,6 +8,23 @@
     <PackageReference Include="Microsoft.AspNetCore.Identity.EntityFrameworkCore" Version="3.1.29" />
     <PackageReference Include="Microsoft.EntityFrameworkCore.SqlServer" Version="3.1.29" />
     <PackageReference Include="Microsoft.VisualStudio.Web.CodeGeneration.Design" Version="3.1.5" />
+    <PackageReference Include="SixLabors.ImageSharp" Version="2.1.3" />
+    <PackageReference Include="VisioForge.DotNet.Core.TRIAL" Version="15.1.12" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Reference Include="CaesarCipher">
+      <HintPath>..\..\..\..\Users\79512\source\repos\CeasarCypher\CeasarCypher\bin\Debug\netcoreapp3.1\CaesarCipher.dll</HintPath>
+    </Reference>
+    <Reference Include="SteganographyLibrary">
+      <HintPath>..\..\..\..\Users\79512\Downloads\Steganography-Library-master\SteganographyLibrary\bin\Debug\netstandard2.1\SteganographyLibrary.dll</HintPath>
+    </Reference>
+    <Reference Include="TranspositionCipher">
+      <HintPath>..\..\..\..\Users\79512\Downloads\TranspositionCipher-master\TranspositionCipher\bin\Debug\TranspositionCipher.exe</HintPath>
+    </Reference>
+    <Reference Include="vshost32">
+      <HintPath>..\..\..\..\Users\79512\Downloads\TranspositionCipher-master\TranspositionCipher\bin\Debug\TranspositionCipher.vshost.exe</HintPath>
+    </Reference>
   </ItemGroup>
 
 </Project>

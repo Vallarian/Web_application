@@ -13,6 +13,7 @@
     <SourceRoot Include="C:\Users\79512\.nuget\packages\" />
   </ItemGroup>
   <PropertyGroup Condition=" '$(ExcludeRestorePackageImports)' != 'true' ">
+    <PkgVisioForge_DotNet_Core_TRIAL Condition=" '$(PkgVisioForge_DotNet_Core_TRIAL)' == '' ">C:\Users\79512\.nuget\packages\visioforge.dotnet.core.trial\15.1.12</PkgVisioForge_DotNet_Core_TRIAL>
     <PkgMicrosoft_CodeAnalysis_Analyzers Condition=" '$(PkgMicrosoft_CodeAnalysis_Analyzers)' == '' ">C:\Users\79512\.nuget\packages\microsoft.codeanalysis.analyzers\2.9.4</PkgMicrosoft_CodeAnalysis_Analyzers>
   </PropertyGroup>
 </Project>

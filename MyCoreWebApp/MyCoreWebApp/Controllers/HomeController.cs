@@ -29,6 +29,29 @@ namespace MyCoreWebApp.Controllers
         {
             return View();
         }
+        public IActionResult Cipher()
+        {
+            return View();
+        }
+
+        public IActionResult Steganography()
+        {
+            return View();
+        }
+        [HttpPost]
+        public IActionResult Cipher(CaesarCipher text, Calculator cal)
+        {
+            var val1 = cal.value1;
+            var val2 = int.Parse(cal.value2);
+            string result = "";
+            if (cal.calulate == "Encode")
+                result = text.Encrypt(val1, val2);
+            if (cal.calulate == "Decode")
+                result = text.Decrypt(val1, val2);
+            ViewData["result"] = result;
+            return View();
+        }
+
         [HttpPost]
         public IActionResult Privacy(Calculator cal)
         {
