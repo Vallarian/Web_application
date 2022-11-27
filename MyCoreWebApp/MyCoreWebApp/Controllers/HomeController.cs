@@ -1,4 +1,6 @@
 ﻿using Microsoft.AspNetCore.Authorization;
+using Microsoft.AspNetCore.Hosting;
+using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Logging;
 using MyCoreWebApp.Models;
@@ -6,14 +8,19 @@ using System;
 using System.Collections.Generic;
 using System.Data;
 using System.Diagnostics;
+using System.IO;
 using System.Linq;
 using System.Threading.Tasks;
+using System.Drawing;
+using VisioForge.MediaFramework.FFMPEGCore.Extend;
+
 
 namespace MyCoreWebApp.Controllers
 {
     public class HomeController : Controller
     {
         private readonly ILogger<HomeController> _logger;
+
 
         public HomeController(ILogger<HomeController> logger)
         {
@@ -33,11 +40,6 @@ namespace MyCoreWebApp.Controllers
         {
             return View();
         }
-
-        public IActionResult Steganography()
-        {
-            return View();
-        }
         [HttpPost]
         public IActionResult Cipher(CaesarCipher text, Calculator cal)
         {
@@ -51,7 +53,6 @@ namespace MyCoreWebApp.Controllers
             ViewData["result"] = result;
             return View();
         }
-
         [HttpPost]
         public IActionResult Privacy(Calculator cal)
         {
@@ -60,7 +61,7 @@ namespace MyCoreWebApp.Controllers
                                                 'Т', 'У', 'Ф', 'Х', 'Ц', 'Ч', 'Ш', 'Щ', 'Ь', 'Ы', 'Ъ',
                                                 'Э', 'Ю', 'Я', ' ', '1', '2', '3', '4', '5', '6', '7',
                                                 '8', '9', '0' };
-            if(cal.calulate=="Encode")
+            if (cal.calulate == "Encode")
             {
                 var charactersLenght = characters.Length;
                 var input = Convert.ToString(cal.value1);
@@ -108,7 +109,7 @@ namespace MyCoreWebApp.Controllers
                 }
                 cal.result = result;
             }
-            ViewData["result"]=cal.result;
+            ViewData["result"] = cal.result;
             return View();
         }
 
@@ -117,7 +118,6 @@ namespace MyCoreWebApp.Controllers
         {
             return View(new ErrorViewModel { RequestId = Activity.Current?.Id ?? HttpContext.TraceIdentifier });
         }
-
-
     }
+    
 }

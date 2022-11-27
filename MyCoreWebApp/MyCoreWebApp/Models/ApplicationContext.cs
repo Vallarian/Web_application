@@ -3,12 +3,13 @@ using Microsoft.EntityFrameworkCore;
 
 namespace MyCoreWebApp.Models
 {
-    public class ApplicationContext : IdentityDbContext<User>
+    public class ApplicationContext : IdentityDbContext<User> 
     {
         public ApplicationContext(DbContextOptions<ApplicationContext> options)
             : base(options)
         {
             Database.EnsureCreated();
         }
+
     }
 }
